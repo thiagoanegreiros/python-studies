@@ -1,3 +1,4 @@
+from typing import Optional
 import requests
 from fastapi import FastAPI
 
@@ -19,12 +20,12 @@ class Todo():
 app = FastAPI()
 
 @app.get("/myapi")
-def read_root():
+def read_root(userId: Optional[int] = None, completed: Optional[bool] = None):
 
     response = requests.get('https://jsonplaceholder.typicode.com/todos')
 
     items = [Todo(item['userId'], item['id'], item['title'], item['completed']) for item in response.json()]
 
-    return items
+    return items if userId is None else list(filter(lambda i: i.userId == userId, items))
 
 print('aaa')
