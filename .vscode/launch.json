@@ -6,7 +6,7 @@
             "type": "debugpy",
             "request": "attach",
             "processId": "${command:pickProcess}",
-            "python": "/Users/jacquelinemoura/.pyenv/shims/python3"
+            "python": "venv/bin/python3"
         },
         {
             "name": "Python Debugger: Current File",
@@ -14,7 +14,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "python": "/Users/jacquelinemoura/.pyenv/shims/python3"
+            "python": "venv/bin/python3"
         }
     ]
 }
