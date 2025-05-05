@@ -1,0 +1,5 @@
+[INFO] Sistema iniciado
+[DEBUG] Valor do sensor: 52
+[ERROR] Falha no módulo X
+[INFO] Operação finalizada
+[ERROR] Falha de autenticação
