@@ -1,10 +1,8 @@
-from abc import ABC, abstractmethod
+from typing import Protocol
 
 
-class NotificationChannel(ABC):
-    @abstractmethod
-    def send_notification(self, destiny: str, message: str):
-        pass
+class NotificationChannel(Protocol):
+    def send_notification(self, destiny: str, message: str): ...
 
 
 class EmailNotification(NotificationChannel):
